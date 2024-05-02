@@ -1,0 +1,21 @@
+package aulaa3;
+import java.util.Scanner;
+public class main {
+	public static void main(String[] args) {
+		int x;
+		System.out.println("Digite o valor de X: ");
+		Scanner sc = new Scanner(System.in);
+		x = sc.nextInt();
+		if ( x>2) {
+			System.out.printf("O numero %d e maior que 2" , x);
+			
+		}else if ( x==2) {
+			
+			System.out.printf("O numero %d e igual a 2" , x);
+			
+		} else if ( x<2) {
+			
+			System.out.printf("O numero %d e menor que 2" , x);
+		}
+	}
+}
