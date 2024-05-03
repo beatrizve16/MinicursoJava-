@@ -1,0 +1,23 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Digite as tred notas: ");
+        double nota1 = scanner.nextDouble();
+        double nota2 = scanner.nextDouble();
+        double nota3 = scanner.nextDouble();
+        System.out.print("Digite 'A' para  aritimetica ou 'P' para  ponderada: ");
+        char opcao = scanner.next().charAt(0);
+        double media = calculateGradeAverage(nota1, nota2, nota3, opcao);
+        System.out.println("A media do aluno e: " + media);
+    }
+    public static double calculateGradeAverage(double nota1, double nota2, double nota3, char opcao) {
+        if (opcao == 'A' || opcao == 'a') {
+            return (nota1 + nota2 + nota3) / 3;
+        } else if (opcao == 'P' || opcao == 'p') {
+            return (nota1 * 5 + nota2 * 3 + nota3 * 2) / 10;
+        } 
+        return -1;
+        }
+    }
+
