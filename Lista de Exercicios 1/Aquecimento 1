@@ -1,0 +1,28 @@
+package lista;
+
+import java.util.Scanner;
+
+public class Aquecimento1 {
+
+	
+	public static int mult(int x, int y) {
+		int result;
+		result = x*y;
+		return result;
+				
+	}
+	
+	
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Entre com 2 números: ");
+		int a = sc.nextInt();
+		int b = sc.nextInt();
+		
+		int multiplicacao = mult(a,b);
+		
+		System.out.println("O resultado e:  " + multiplicacao);
+	}
+
+}
