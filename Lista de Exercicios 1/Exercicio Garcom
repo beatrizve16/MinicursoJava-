@@ -1,0 +1,85 @@
+package lista;
+import java.util.Scanner;
+
+
+public class ExercicioGarcom {
+
+	public static void quebrados(int copos, int latas) {
+		
+		int quebr; 
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Digite a quantidade de bandejas: ");
+        int q  = scanner.nextInt();
+        
+        for (int i = 0; i <= q ; i++) {
+        	System.out.print("Digite a quantidade de copos da bandeja: " + i+1);
+            int cop  = scanner.nextInt();
+            
+            System.out.print("Digite a quantidade de latas da bandeja: " + i+1);
+            int lat  = scanner.nextInt();
+            
+            if ( lat > cop) {
+            	
+            	quebr =+ cop;
+            } else if ( lat<cop ) {
+            	
+            	quebr =+0;
+            }
+            
+            
+        }
+		
+	}
+	
+	
+	public static void main(String[] args) {
+		
+		
+
+	}
+
+}
+
+
+
+
+package lista;
+import java.util.Scanner;
+
+public class Exercicioteste {
+
+	
+	public static void quebrados(int)
+	public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+int quebr;
+int cop;
+int lat;
+		System.out.print("Digite a quantidade de bandejas: ");
+        int q  = scanner.nextInt();
+        
+        for (int i = 1; i <= q ; i++) {
+        	System.out.print("Digite a quantidade de copos da bandeja: " + i);
+             cop  = scanner.nextInt();
+            
+            System.out.print("Digite a quantidade de latas da bandeja: " + i );
+             lat  = scanner.nextInt();
+             
+             if ( lat > cop) {
+             	
+             	quebr =+ cop;
+                System.out.print("A quatidade de copos quebrados foi: " + quebr);
+
+             } else if ( lat<cop ) {
+             	
+             	quebr =+0;
+                System.out.print("A quatidade de copos quebrados foi: " + quebr);
+
+             } 
+           
+	}  
+
+
+
+
+
