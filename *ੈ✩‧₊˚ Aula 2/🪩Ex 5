@@ -1,0 +1,20 @@
+package aulaa3;
+import java.util.Scanner;
+public class Main4 {
+	public static void main(String[] args) {
+       double qtd, pagar;
+       System.out.println("Digite a quantidade de minutos consumidos");
+       Scanner sc = new Scanner(System.in);
+       qtd = sc.nextDouble();
+       
+       if (qtd > 100 ) {
+           pagar = 50 + (( qtd - 100 ) * 2);
+           System.out.println("O valor a pagar eh:" + pagar);
+          
+       } else {
+           System.out.println("O valor a pagar eh: 50 reais");
+       }
+      
+	}
+}
+
