@@ -1,0 +1,38 @@
+package lista;
+import java.util.Scanner;
+
+
+public class ExercicioGarcom {
+
+	public static void quebrados() {
+		
+		int quebr = 0; 
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Digite a quantidade de bandejas: ");
+        int q  = scanner.nextInt();
+       
+        for (int i = 0; i <= q ; i++) {
+        	System.out.print("Digite a quantidade de copos da bandeja: " + i+1);
+            int copos  = scanner.nextInt();
+            
+            System.out.print("Digite a quantidade de latas da bandeja: " + i+1);
+            int  latas  = scanner.nextInt();
+            
+            if ( latas > copos) {
+            	
+            	quebr =+ copos;
+            } else if ( latas<copos ) {
+            	
+            	quebr =+0;
+            }
+            
+        }
+		
+        System.out.printf("A quantidade de copos quebrados foi: %d " , quebr );
+
+	}
+	
+	
+	public static void main(String[] args) {
+		quebrados();
+	}
