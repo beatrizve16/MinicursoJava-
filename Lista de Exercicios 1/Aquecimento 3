@@ -1,0 +1,24 @@
+package lista;
+
+import java.util.Scanner;
+
+public class Aquecimento3 {
+	 public static double mediaa(int num) {
+	        Scanner scanner = new Scanner(System.in);
+	        double soma = 0;
+	        for (int i = 0; i < num; i++) {
+	            System.out.print("Digite o numero " + (i + 1) + ": ");
+	            soma += scanner.nextDouble();
+	        }
+	        return soma / num;
+	    }
+	 
+	public static void main(String[] args) {
+			Scanner scanner = new Scanner(System.in);
+			System.out.print("qtd de numerod? ");
+			int num = scanner.nextInt();
+			double media = mediaa(num);
+			System.out.println("A media dos numeros e : " + media);
+	}
+
+}
