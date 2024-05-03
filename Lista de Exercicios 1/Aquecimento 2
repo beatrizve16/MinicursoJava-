@@ -1,0 +1,24 @@
+package lista;
+
+import java.util.Scanner;
+
+public class Aquecimento2 {
+
+	public static boolean isMultipleOfTwo(int num) {
+	    return num % 2 == 0;
+	}
+
+	
+	public static void main(String[] args) {
+		
+		Scanner scanner = new Scanner(System.in);
+	    System.out.print("Digite um número inteiro para verificar se é múltiplo de 2: ");
+	    int num = scanner.nextInt();
+	    if (isMultipleOfTwo(num)) {
+	        System.out.println(num + " é múltiplo de 2.");
+	    } else {
+	        System.out.println(num + " não é múltiplo de 2.");
+	    }
+	}
+
+}
