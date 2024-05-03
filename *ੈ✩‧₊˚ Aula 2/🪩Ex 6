@@ -1,0 +1,24 @@
+package aulaa3;
+import java.util.Scanner;
+public class Main5 {
+	public static void main(String[] args) {
+       double hora;
+       System.out.println("Digite que horas sao");
+       Scanner sc = new Scanner(System.in);
+       hora = sc.nextDouble ();
+      
+      
+       if (0<=hora &&  hora < 6 ) {
+           System.out.printf("Sao: %.2f horas! Boa madrugada" , hora);
+          
+       } else if (hora >= 6 && hora <12){
+       	 System.out.printf("Sao: %.2f horas! Bom Dia " , hora);
+       } else if (hora >=12 && hora <18){
+       	 System.out.printf("Sao: %.2f horas! Boa tarde" , hora);
+       }else if ( hora >= 18 && hora <24) {
+       	 System.out.printf("Sao: %.2f horas! Boa noite" , hora);
+       }
+	}
+}
+
+
