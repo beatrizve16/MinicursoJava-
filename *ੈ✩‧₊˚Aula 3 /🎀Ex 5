@@ -1,0 +1,17 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Digite uma string: ");
+        String string = scanner.nextLine();
+        System.out.print("Digite a letra que deseja substituir: ");
+        char letraantiga = scanner.next().charAt(0);
+        System.out.print("Digite a letra pela qual deseja substituir: ");
+        char letranova = scanner.next().charAt(0);
+        String replacedString = replaceChar(string, letraantiga, letranova);
+        System.out.println("String  substituido: " + replacedString);
+    }
+    public static String replaceChar(String str, char letraantiga, char letranova) {
+        return str.replace(letraantiga,  letranova);
+    }
+}
