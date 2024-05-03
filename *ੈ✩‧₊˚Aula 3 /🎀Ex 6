@@ -1,0 +1,13 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Digite uma string: ");
+        String string = scanner.nextLine();
+        String stringfinal = semvogal(string);
+        System.out.println("String sem vogais: " + stringfinal);
+    }
+    public static String semvogal(String str) {
+        return str.replaceAll("[aeiouAEIOU]" , "");
+    }
+}
