@@ -1,0 +1,24 @@
+package aula4;
+import java.util.Scanner;
+
+public class Ex1dw {
+
+	public static void main(String[] args) {
+		
+Scanner sc = new Scanner(System.in);
+		
+		
+		System.out.println("Digite a senha: ");
+		int senha = sc.nextInt();
+		
+		while (senha != 2002) {
+			System.out.println("Senha invalida\nDigite a senha: ");
+			 senha = sc.nextInt();
+			 if (senha == 2002) {
+				 System.out.println("Acesso permitido");
+			 } 
+		}
+		
+	}
+
+}
