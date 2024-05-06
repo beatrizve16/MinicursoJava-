@@ -1,0 +1,33 @@
+import java.util.Scanner; 
+public class Exjava4 {
+    public static void main (String[] args){
+    
+        Scanner sc = new Scanner(System.in);
+
+        int par=0;
+        int impar=0;
+        int num=0 ;
+
+        
+
+        while( num !=-1){ 
+            System.out.println("Digite um numero inteiro:");
+            num = sc.nextInt();
+                
+            if (num ==-1) break;
+            if (num % 2 == 0){
+                par+=1;
+            } 
+            if (num % 2 != 0){
+               impar+=1;
+            }
+        }
+   
+            System.out.printf("Quatidade de numeros pares: %d\n" , par);
+            System.out.printf("Quatidade de numeros impares: %d\n" , impar);
+    
+        
+    sc.close();
+    
+        }
+    }
