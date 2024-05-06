@@ -1,0 +1,33 @@
+
+import java.util.Scanner; 
+
+public class Exerciciojava {
+    public static void main (String[] args){
+    
+        Scanner sc = new Scanner(System.in);
+        int num = 0;
+        int max = 0;
+        int min = 9999999;
+    
+        while( num !=-1){
+    
+            System.out.println("Digite um numero inteiro:");
+            num = sc.nextInt();
+                
+            if (num!=-1) break;
+            if (num > max){
+                max = num;
+            } 
+            if (num < min){
+                min = num;
+            }
+        }
+   
+            System.out.printf("O maior numero digitado foi %d\n" , max);
+            System.out.printf("O maior numero digitado foi %d\n" , min);
+    
+        
+    sc.close();
+    
+        }
+    }
