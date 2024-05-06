@@ -1,0 +1,25 @@
+package aula4;
+
+import java.util.Scanner;
+
+public class Ex4 {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Digite um numero inteiro para saber seu fatorial");
+		int n = sc.nextInt();
+		int i;
+		int fat=0;
+		
+		if (n == 0){
+			fat = 1;
+		} else {
+			for (i =1; i<n; i++) {
+				fat += n*i;
+			}
+		}
+		System.out.printf("%d\n", fat);
+		}
+		
+	}
