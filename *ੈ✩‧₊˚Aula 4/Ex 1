@@ -1,0 +1,31 @@
+package aula4;
+import java.util.Scanner;
+public class Ex1 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		int dentro = 0;
+		int fora = 0;
+		int i;
+		
+		System.out.println("Quantos números voce ira digitar? ");
+		int n = sc.nextInt();
+	
+		for (i =0; i<n; i++) {
+			
+			System.out.println("Digite o numero " + (i+1) );
+			int num = sc.nextInt();
+			
+			if (num >= 10 && num <= 20) {
+				dentro++;
+			} else {
+				fora++;
+			}
+		}
+		
+		System.out.println("A quantidade de numeros dentro e " + dentro );
+		System.out.println("A quantidade de numeros fora e " + fora );
+		
+	}
+}
