@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+
+public class vetor4 {
+
+    public static void main(String[] args) {
+
+    Scanner sc = new Scanner(System.in);
+
+    
+        System.out.println(" Quantos numeros ira digitar: ");
+		int qtd = sc.nextInt();
+		double [] vetor = new double[qtd];
+
+        int max=0;
+        int i;
+
+		for ( i = 0; i < qtd; i++) {
+			System.out.print("Digite um numero: ");
+			vetor[i] = sc.nextDouble();
+
+
+            if (vetor[i]>max){
+    
+                vetor[i] = max;
+            }
+    
+		}
+
+      
+        System.out.printf(" O maior numero digitado e: %.2f\nA sua posicao e: %.2f " , max, i);
+
+
+
+    }
+
+}
