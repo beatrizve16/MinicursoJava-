@@ -1,0 +1,38 @@
+
+//Crie um Array de inteiros com 7 elementos.
+// Solicite ao usuário que informe um número que será
+// adicionado ao primeiro e ao último elemento do Array.
+// Imprima o Array resultante.
+
+//import java.util.Scanner;
+
+//public class atividade1 {
+    //public static void main(String[] args) {
+
+//Scanner sc = new Scanner(System.in);
+
+//int[]array = new int [7];
+
+//System.out.print(" Digite o primeiro numero do array: ");
+
+/*int inicial = sc.nextInt();
+
+System.out.print(" Digite o ultimo numero do array: ");
+int fim = sc.nextInt();
+
+System.out.printf(" O array final e:\n");
+
+int numero=inicial;
+
+for (int i = 0; i<= 7; i++){
+
+    array[i]=numero;
+    numero++;
+    System.out.print(array[i]);
+
+}
+
+sc.close();
+
+    }
+}*/
