@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class ContagemCaractereString {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Digite uma string:");
+        String texto = scanner.nextLine();
+        System.out.println("Digite o caractere a ser contado:");
+        char caractere = scanner.next().charAt(0);
+        int contador = 0;
+        for (int i = 0; i < texto.length(); i++) {
+            if (texto.charAt(i) == caractere) {
+                contador++;
+            }
+        }
+        System.out.println("O caractere '" + caractere + "' ocorre " + contador + " vezes na string.");
+        scanner.close();
+    }
+}
