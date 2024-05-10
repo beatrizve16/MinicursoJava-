@@ -1,0 +1,12 @@
+import java.util.Scanner;
+
+public class BinarioParaDecimal {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Digite um número binário:");
+        String binario = scanner.nextLine();
+        int decimal = Integer.parseInt(binario, 2);
+        System.out.println("O número decimal correspondente é: " + decimal);
+        scanner.close();
+    }
+}
