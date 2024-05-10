@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class JurosSimples {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Digite o valor principal:");
+        double principal = scanner.nextDouble();
+        System.out.println("Digite a taxa de juros:");
+        double taxaJuros = scanner.nextDouble();
+        System.out.println("Digite o período em anos:");
+        int periodoAnos = scanner.nextInt();
+        double montante = principal * (1 + (taxaJuros / 100) * periodoAnos);
+        System.out.println("O montante final é: " + montante);
+        scanner.close();
+    }
+}
