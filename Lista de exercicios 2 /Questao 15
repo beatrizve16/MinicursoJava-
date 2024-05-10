@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class VerificacaoNumeroPerfeito {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Digite um número:");
+        int num = scanner.nextInt();
+        int sum = 0;
+        for (int i = 1; i < num; i++) {
+            if (num % i == 0) {
+                sum += i;
+            }
+        }
+        if (sum == num) {
+            System.out.println("O número é perfeito.");
+        } else {
+            System.out.println("O número não é perfeito.");
+        }
+        scanner.close();
+    }
+}
