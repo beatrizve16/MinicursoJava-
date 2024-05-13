@@ -1,0 +1,12 @@
+public class triangulo {
+	public double base;
+	public double altura;
+
+    public double area;
+    public double calcArea(double base,double altura){
+        return (base*altura)/2;
+
+    }
+
+    
+}
