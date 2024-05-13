@@ -1,0 +1,67 @@
+// Classe base para produtos
+public class Produto {
+    private String nome;
+    private double preco;
+
+    // Construtor
+    public Produto(String nome, double preco) {
+        this.nome = nome;
+        this.preco = preco;
+    }
+
+    // Getters e Setters
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public double getPreco() {
+        return preco;
+    }
+
+    public void setPreco(double preco) {
+        this.preco = preco;
+    }
+}
+
+// Subclasse Livro
+public class Livro extends Produto {
+    private String autor;
+
+    // Construtor
+    public Livro(String nome, double preco, String autor) {
+        super(nome, preco);
+        this.autor = autor;
+    }
+
+    // Outros métodos específicos de Livro
+}
+
+// Subclasse Eletronico
+public class Eletronico extends Produto {
+    private String marca;
+
+    // Construtor
+    public Eletronico(String nome, double preco, String marca) {
+        super(nome, preco);
+        this.marca = marca;
+    }
+
+    // Outros métodos específicos de Eletronico
+}
+
+// Subclasse Roupa
+public class Roupa extends Produto {
+    private String tamanho;
+
+    // Construtor
+    public Roupa(String nome, double preco, String tamanho) {
+        super(nome, preco);
+        this.tamanho = tamanho;
+    }
+
+    // Outros métodos específicos de Roupa
+}
