@@ -1,0 +1,20 @@
+
+package exercicio1.programa;
+import java.util.Scanner;
+
+public class mainretangulo {
+
+    Scanner sc = new Scanner(System.in);
+
+    Retangulo x = new Retangulo();
+    
+    x.largura = sc.nextDouble();
+    x.altura = sc.nextDouble();
+    
+    x.area= x.calcArea(x.base, x.altura);
+    x.perimetro= x.calcPerimetro(x.base, x.altura);
+    x.diagonal= x.calcDiagonal(x.base, x.altura);
+
+    
+
+}
