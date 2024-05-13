@@ -1,8 +1,9 @@
-package exercicio1.programa.entidades;
+package teste.minicursoJava;
 public class Retangulo {
     
     public double largura;
     public double altura;
+    public double base;
     public double area;
     public double perimetro;
     public double diagonal;
