@@ -1,0 +1,67 @@
+// Classe base para animais
+public class Animal {
+    private String nome;
+    private int idade;
+
+    // Construtor
+    public Animal(String nome, int idade) {
+        this.nome = nome;
+        this.idade = idade;
+    }
+
+    // Getters e Setters
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public int getIdade() {
+        return idade;
+    }
+
+    public void setIdade(int idade) {
+        this.idade = idade;
+    }
+}
+
+// Subclasse Mamifero
+public class Mamifero extends Animal {
+    private String tipoPelagem;
+
+    // Construtor
+    public Mamifero(String nome, int idade, String tipoPelagem) {
+        super(nome, idade);
+        this.tipoPelagem = tipoPelagem;
+    }
+
+    // Outros métodos específicos de Mamifero
+}
+
+// Subclasse Ave
+public class Ave extends Animal {
+    private double envergaduraAsas;
+
+    // Construtor
+    public Ave(String nome, int idade, double envergaduraAsas) {
+        super(nome, idade);
+        this.envergaduraAsas = envergaduraAsas;
+    }
+
+    // Outros métodos específicos de Ave
+}
+
+// Subclasse Reptil
+public class Reptil extends Animal {
+    private boolean venenoso;
+
+    // Construtor
+    public Reptil(String nome, int idade, boolean venenoso) {
+        super(nome, idade);
+        this.venenoso = venenoso;
+    }
+
+    // Outros métodos específicos de Reptil
+}
