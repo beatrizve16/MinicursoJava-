@@ -1,0 +1,68 @@
+public class Produto {
+    private String nome;
+    private double preco;
+    private int quantidadeEmEstoque;
+
+    // Construtor
+    public Produto(String nome, double preco, int quantidadeEmEstoque) {
+        this.nome = nome;
+        this.preco = preco;
+        this.quantidadeEmEstoque = quantidadeEmEstoque;
+    }
+
+    // Método para adicionar unidades ao estoque
+    public void adicionarAoEstoque(int quantidade) {
+        quantidadeEmEstoque += quantidade;
+    }
+
+    // Método para remover unidades do estoque
+    public void removerDoEstoque(int quantidade) {
+        if (quantidade <= quantidadeEmEstoque) {
+            quantidadeEmEstoque -= quantidade;
+        } else {
+            System.out.println("Quantidade insuficiente em estoque.");
+        }
+    }
+
+    // Método para calcular o valor total em estoque
+    public double calcularValorTotalEmEstoque() {
+        return preco * quantidadeEmEstoque;
+    }
+
+    // Getters e Setters
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public double getPreco() {
+        return preco;
+    }
+
+    public void setPreco(double preco) {
+        this.preco = preco;
+    }
+
+    public int getQuantidadeEmEstoque() {
+        return quantidadeEmEstoque;
+    }
+
+    public void setQuantidadeEmEstoque(int quantidadeEmEstoque) {
+        this.quantidadeEmEstoque = quantidadeEmEstoque;
+    }
+
+    public static void main(String[] args) {
+        // Exemplo de uso
+        Produto produto = new Produto("Arroz", 5.99, 10);
+        System.out.println("Valor total em estoque: R$" + produto.calcularValorTotalEmEstoque());
+
+        produto.adicionarAoEstoque(5);
+        System.out.println("Valor total em estoque após adicionar: R$" + produto.calcularValorTotalEmEstoque());
+
+        produto.removerDoEstoque(3);
+        System.out.println("Valor total em estoque após remover: R$" + produto.calcularValorTotalEmEstoque());
+    }
+}
