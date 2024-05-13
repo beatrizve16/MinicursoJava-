@@ -1,0 +1,75 @@
+public class FiguraGeometrica {
+    private String nome;
+
+    public FiguraGeometrica(String nome) {
+        this.nome = nome;
+    }
+
+    public double calcularArea() {
+        return 0;
+    }
+
+    public double calcularPerimetro() {
+        return 0;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+}
+
+class Quadrado {
+    private double lado;
+
+    public Quadrado(double lado) {
+        this.lado = lado;
+    }
+
+    public double area() {
+        return lado * lado;
+    }
+
+    public double perimetro() {
+        return 4 * lado;
+    }
+}
+
+class Circulo {
+    private double raio;
+
+    public Circulo(double raio) {
+        this.raio = raio;
+    }
+
+    public double area() {
+        return Math.PI * raio * raio;
+    }
+
+    public double perimetro() {
+        return 2 * Math.PI * raio;
+    }
+}
+
+class Triangulo {
+    private double base;
+    private double altura;
+    private double lado1;
+    private double lado2;
+    private double lado3;
+
+    public Triangulo(double base, double altura, double lado1, double lado2, double lado3) {
+        this.base = base;
+        this.altura = altura;
+        this.lado1 = lado1;
+        this.lado2 = lado2;
+        this.lado3 = lado3;
+    }
+
+    public double area() {
+        return (base * altura) / 2;
+    }
+
+    public double perimetro() {
+        return lado1 + lado2 + lado3;
+    }
+}
