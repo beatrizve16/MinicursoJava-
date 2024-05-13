@@ -1,0 +1,76 @@
+public class Aluno {
+    private String nome;
+    private int matricula;
+    private double[] notas;
+
+    // Construtor
+    public Aluno(String nome, int matricula, int numDisciplinas) {
+        this.nome = nome;
+        this.matricula = matricula;
+        this.notas = new double[numDisciplinas];
+    }
+
+    // Método para adicionar nota em uma disciplina
+    public void adicionarNota(int indiceDisciplina, double nota) {
+        if (indiceDisciplina >= 0 && indiceDisciplina < notas.length) {
+            notas[indiceDisciplina] = nota;
+        } else {
+            System.out.println("Índice de disciplina inválido.");
+        }
+    }
+
+    // Método para calcular a média das notas
+    public double calcularMedia() {
+        double soma = 0;
+        for (double nota : notas) {
+            soma += nota;
+        }
+        return soma / notas.length;
+    }
+
+    // Método para verificar se o aluno foi aprovado
+    public boolean verificarAprovacao(double mediaMinima) {
+        return calcularMedia() >= mediaMinima;
+    }
+
+    // Getters e Setters
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public int getMatricula() {
+        return matricula;
+    }
+
+    public void setMatricula(int matricula) {
+        this.matricula = matricula;
+    }
+
+    public double[] getNotas() {
+        return notas;
+    }
+
+    public void setNotas(double[] notas) {
+        this.notas = notas;
+    }
+
+    public static void main(String[] args) {
+        // Exemplo de uso
+        Aluno aluno = new Aluno("João", 123456, 3);
+        aluno.adicionarNota(0, 8.5);
+        aluno.adicionarNota(1, 7.0);
+        aluno.adicionarNota(2, 6.5);
+
+        double mediaMinima = 6.0;
+        System.out.println("Média do aluno: " + aluno.calcularMedia());
+        if (aluno.verificarAprovacao(mediaMinima)) {
+            System.out.println("Aluno aprovado!");
+        } else {
+            System.out.println("Aluno reprovado.");
+        }
+    }
+}
