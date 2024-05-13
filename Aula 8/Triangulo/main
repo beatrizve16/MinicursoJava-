@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+public class main2 {
+public static void main(String[] args) {
+    
+Scanner sc = new Scanner(System.in);
+		
+
+triangulo x = new triangulo();
+triangulo y = new triangulo();
+
+x.base = sc.nextDouble();
+x.altura = sc.nextDouble();
+
+
+y.altura = sc.nextDouble();
+y.base = sc.nextDouble();
+
+x.area= x.calcArea(x.base, x.altura);
+y.area = y.calcArea(y.base, y.altura);
+
+
+if (x.area>y.area){
+    System.out.println("X e maior que Y");
+}
+else if( y.area > x.area){
+    System.out.println("Y e maior que X");
+}
+else if(x.area == y.area){
+    System.out.println("as areas sao iguais");
+}
+		sc.close();
+	}
+}
