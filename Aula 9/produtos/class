@@ -1,0 +1,31 @@
+
+package ProdutosEmUmMercado.entidades;
+// Crie uma classe Produto que represente um 
+// produto em um mercado. Ela deve ter atributos como nome,
+//  preco e quantidade em estoque. Implemente métodos para adicionar
+//   e remover unidades do estoque e calcular o valor total em estoque.
+public class produtosClasse {
+    public String nome;
+    public double preco;
+    public double quantidade;
+    public double adicionar;
+    public double remover;
+    public double valorTotal;
+
+
+    public double funcAdd(double quantidade, double adicionar ){
+    quantidade += adicionar;
+    return quantidade;
+    }
+
+    public double funcRemover(double quantidade, double remover ){ 
+    quantidade += remover;
+    return quantidade;
+    }
+
+    public double funcValor(double quantidade,double preco ){
+
+    valorTotal = quantidade*preco;
+    return valorTotal;
+    }
+}
