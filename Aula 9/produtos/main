@@ -1,0 +1,62 @@
+package ProdutosEmUmMercado.main;
+// Crie uma classe Produto que represente um 
+// produto em um mercado. Ela deve ter atributos como nome,
+//  preco e quantidade em estoque. Implemente métodos para adicionar
+//   e remover unidades do estoque e calcular o valor total em estoque.
+import java.util.Scanner;
+
+import ProdutosEmUmMercado.entidades.produtosClasse;
+public class produtosMain {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        produtosClasse x = new produtosClasse();
+
+        
+        System.out.println("Digite o nome do produto") ;
+        x.nome = sc.next();
+
+        System.out.println("Digite o preco do produto") ;
+        x.preco= sc.nextDouble();
+
+        System.out.println("Digite a quantidade do produto em estoque ") ;
+        x.quantidade = sc.nextDouble();
+
+
+System.out.println("1-Adicionar\n2-Remover\n3-Valor total do estoque");
+int escolha = sc.nextInt();
+
+switch (escolha) {
+
+    case 1:
+    System.out.println("Quanto quer adicionar:");
+     x.adicionar = sc.nextInt();
+    x.quantidade = x.funcAdd(x.quantidade,x.adicionar);
+    System.out.printf("A quantidade do produto depois de adicionar  e:" + x.quantidade);
+    break;
+
+    case 2:
+    System.out.println("Quanto quer remover:");
+    x.remover = sc.nextInt();
+    x.quantidade = x.funcRemover(x.quantidade,x.remover);
+    System.out.printf("A quantidade do produto depois de remover  e:" + x.quantidade);
+    break;
+
+    case 3:
+    x.funcValor(x.quantidade, x.preco);
+    System.out.printf("O valor total do estoque e :" + x.valorTotal);
+    break; 
+
+}
+
+
+
+
+
+
+
+
+
+    }
+}
