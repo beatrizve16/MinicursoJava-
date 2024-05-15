@@ -1,17 +1,13 @@
-package alunosenotas.main;
+package alunosenotas.entidades;
+public class classe {
+   
 
-public class Aluno {
     public String nome;
     public String matricula;
-    public double[] notas;
-
-    public void adicionarMaterias (int indiceDisciplina, double materia) {
-        notas[indiceDisciplina] = materia;
-    }
-
-    public void adicionarNota(int indiceDisciplina, double nota) {
-        notas[indiceDisciplina] = nota;
-    }
+    public int n;
+    public double [] notas = new double [n];
+    
+    
 
     public double calcularMedia() {
         double soma = 0;
@@ -26,3 +22,4 @@ public class Aluno {
         return media >= mediaMinima;
     }
 }
+
