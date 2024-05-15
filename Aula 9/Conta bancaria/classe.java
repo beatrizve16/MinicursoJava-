@@ -1,25 +1,26 @@
+package alunosenotas.entidades;
+public class classe {
+   
 
+    public String nome;
+    public String matricula;
+    public int n;
+    public double [] notas = new double [n];
+    
+    
 
-package ContaBancaria.Entidades;
-
-public class ContaBancaria {
-
-    public double numero;
-    public double saldo;
-    public double sacar;
-    public double depositar;
-
-    public double funcDepositar(double saldo, double depositar){
-         saldo += depositar;
-         return saldo;
+    public double calcularMedia() {
+        double soma = 0;
+        for (double nota : notas) {
+            soma += nota;
+        }
+        return soma / notas.length;
     }
 
-    public double funcSacar(double saldo, double sacar){
-        saldo -= sacar;
-        return saldo; 
-    }
-
-    public double funcVerificar(double saldo){
-        return (saldo);
+    public boolean foiAprovado(double mediaMinima) {
+        double media = calcularMedia();
+        return media >= mediaMinima;
     }
 }
+
+
