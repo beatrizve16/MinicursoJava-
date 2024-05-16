@@ -1,53 +1,86 @@
-package python.zoologico; 
+package Produto.Main;
 
-import python.zoologico.Entidades.Ave;
-import python.zoologico.Entidades.Mamifero;
-import python.zoologico.Entidades.Reptil;
-import java.util.Scanner; 
+import java.util.Scanner;
+import Produto.Entidades.Eletronico;                              
+import Produto.Entidades.Livro;
+import Produto.Entidades.Roupa;
+
 
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Qual tipo de animal você quer cadastrar?");
-        System.out.println("1. Mamífero");
-        System.out.println("2. Ave");
-        System.out.println("3. Réptil");
-        int opcao = scanner.nextInt();
-        
-        Mamifero mamifero = new Mamifero();
-        Ave ave = new Ave();
-        Reptil reptil = new Reptil();
-        
-        System.out.println("Digite o nome do animal:");
-        mamifero.nome = scanner.next();
-        ave.nome = mamifero.nome;  // Setting the same name for Ave
-        reptil.nome = mamifero.nome;  // Setting the same name for Reptil
-        
-        System.out.println("Digite a idade do animal:");
-        int idade = scanner.nextInt();
-        
-        switch (opcao) {
+
+        System.out.println("Escolha o tipo de produto:");
+        System.out.println("1. Livro");
+        System.out.println("2. Eletrônico");
+        System.out.println("3. Roupa");
+        int escolha = scanner.nextInt();
+
+        switch (escolha) {
             case 1:
-                System.out.println("Digite o tipo de pelo do mamífero:");
-                mamifero.tipoPelo = scanner.next();
-                mamifero.idade = idade;
-                mamifero.dormir();
+                interactWithLivro(scanner);
                 break;
             case 2:
-                System.out.println("Digite o tipo de penas da ave:");
-                ave.tipoPenas = scanner.next();
-                ave.idade = idade;
-                ave.dormir();
+                interactWithEletronico(scanner);
                 break;
             case 3:
-                System.out.println("Digite o tipo de escamas do réptil:");
-                reptil.tipoEscamas = scanner.next();
-                reptil.idade = idade;
-                reptil.dormir();
+                interactWithRoupa(scanner);
                 break;
             default:
-                System.out.println("Opção inválida.");
+                System.out.println("Escolha inválida.");
         }
+
         scanner.close();
+    }
+
+    public static void interactWithLivro(Scanner scanner) {
+        Livro livro = new Livro();
+        System.out.println("Digite o nome do livro:");
+        livro.nome = scanner.next();
+        System.out.println("Digite o preço do livro:");
+        livro.preco = scanner.nextDouble();
+        scanner.nextLine(); // Consume newline
+        System.out.println("Digite o nome do autor:");
+        livro.autor = scanner.nextLine();
+        System.out.println("Digite o número de páginas:");
+        livro.numeroPaginas = scanner.nextInt();
+
+        // Interact with Livro
+        System.out.println("=== Detalhes do Livro ===");
+        livro.exibirDetalhes();
+    }
+
+    public static void interactWithEletronico(Scanner scanner) {
+        Eletronico eletronico = new Eletronico();
+        System.out.println("Digite o nome do produto eletrônico:");
+        eletronico.nome = scanner.next();
+        System.out.println("Digite o preço do produto eletrônico:");
+        eletronico.preco = scanner.nextDouble();
+        scanner.nextLine(); // Consume newline
+        System.out.println("Digite a marca do produto eletrônico:");
+        eletronico.marca = scanner.nextLine();
+        System.out.println("Digite o modelo do produto eletrônico:");
+        eletronico.modelo = scanner.nextLine();
+
+        // Interact with Eletronico
+        System.out.println("=== Detalhes do Produto Eletrônico ===");
+        eletronico.exibirDetalhes();
+    }
+
+    public static void interactWithRoupa(Scanner scanner) {
+        Roupa roupa = new Roupa();
+        System.out.println("Digite o nome da roupa:");
+        roupa.nome = scanner.next();
+        System.out.println("Digite o preço da roupa:");
+        roupa.preco = scanner.nextDouble();
+        scanner.nextLine(); // Consume newline
+        System.out.println("Digite o tamanho da roupa:");
+        roupa.tamanho = scanner.nextLine();
+        System.out.println("Digite a cor da roupa:");
+        roupa.cor = scanner.nextLine();
+
+        // Interact with Roupa
+        System.out.println("=== Detalhes da Roupa ===");
+        roupa.exibirDetalhes();
     }
 }
