@@ -1,76 +1,53 @@
-package DispositivosEletronicos.Main;
+package python.zoologico; 
 
-import java.util.Scanner;
-import DispositivosEletronicos.Main.Entidades.Notebook;
-import DispositivosEletronicos.Main.Entidades.Smartphone;
-import DispositivosEletronicos.Main.Entidades.Tablet;
-
+import python.zoologico.Entidades.Ave;
+import python.zoologico.Entidades.Mamifero;
+import python.zoologico.Entidades.Reptil;
+import java.util.Scanner; 
 
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
-        System.out.println("Escolha o tipo de dispositivo eletrônico:");
-        System.out.println("1. Smartphone");
-        System.out.println("2. Tablet");
-        System.out.println("3. Notebook");
-        int escolha = scanner.nextInt();
-
-        switch (escolha) {
+        System.out.println("Qual tipo de animal você quer cadastrar?");
+        System.out.println("1. Mamífero");
+        System.out.println("2. Ave");
+        System.out.println("3. Réptil");
+        int opcao = scanner.nextInt();
+        
+        Mamifero mamifero = new Mamifero();
+        Ave ave = new Ave();
+        Reptil reptil = new Reptil();
+        
+        System.out.println("Digite o nome do animal:");
+        mamifero.nome = scanner.next();
+        ave.nome = mamifero.nome;  // Setting the same name for Ave
+        reptil.nome = mamifero.nome;  // Setting the same name for Reptil
+        
+        System.out.println("Digite a idade do animal:");
+        int idade = scanner.nextInt();
+        
+        switch (opcao) {
             case 1:
-                interactWithSmartphone(scanner);
+                System.out.println("Digite o tipo de pelo do mamífero:");
+                mamifero.tipoPelo = scanner.next();
+                mamifero.idade = idade;
+                mamifero.dormir();
                 break;
             case 2:
-                interactWithTablet(scanner);
+                System.out.println("Digite o tipo de penas da ave:");
+                ave.tipoPenas = scanner.next();
+                ave.idade = idade;
+                ave.dormir();
                 break;
             case 3:
-                interactWithNotebook(scanner);
+                System.out.println("Digite o tipo de escamas do réptil:");
+                reptil.tipoEscamas = scanner.next();
+                reptil.idade = idade;
+                reptil.dormir();
                 break;
             default:
-                System.out.println("Escolha inválida.");
+                System.out.println("Opção inválida.");
         }
-
         scanner.close();
-    }
-
-    public static void interactWithSmartphone(Scanner scanner) {
-        Smartphone smartphone = new Smartphone();
-        System.out.println("Digite a marca do smartphone:");
-        smartphone.marca = scanner.next();
-        System.out.println("Digite o ano de fabricação do smartphone:");
-        smartphone.anoFabricacao = scanner.nextInt();
-        scanner.nextLine(); 
-
-        System.out.println("Marca: " + smartphone.marca);
-        System.out.println("Ano de Fabricação: " + smartphone.anoFabricacao);
-        smartphone.ligar();
-        smartphone.enviarMensagem("Olá, mundo!");
-    }
-
-    public static void interactWithTablet(Scanner scanner) {
-        Tablet tablet = new Tablet();
-        System.out.println("Digite a marca do tablet:");
-        tablet.marca = scanner.next();
-        System.out.println("Digite o ano de fabricação do tablet:");
-        tablet.anoFabricacao = scanner.nextInt();
-        scanner.nextLine();
-        System.out.println("Marca: " + tablet.marca);
-        System.out.println("Ano de Fabricação: " + tablet.anoFabricacao);
-        tablet.ligar();
-        tablet.abrirAplicativo("YouTube");
-    }
-
-    public static void interactWithNotebook(Scanner scanner) {
-        Notebook notebook = new Notebook();
-        System.out.println("Digite a marca do notebook:");
-        notebook.marca = scanner.next();
-        System.out.println("Digite o ano de fabricação do notebook:");
-        notebook.anoFabricacao = scanner.nextInt();
-        scanner.nextLine();
-
-        System.out.println("Marca: " + notebook.marca);
-        System.out.println("Ano de Fabricação: " + notebook.anoFabricacao);
-        notebook.ligar();
-        notebook.abrirDocumento("Relatório");
     }
 }
